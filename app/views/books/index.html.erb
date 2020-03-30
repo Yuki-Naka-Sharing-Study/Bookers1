@@ -35,9 +35,9 @@
 	<%= form_for(@book) do |f| %>
 	<%= render 'layouts/error_messages', model: f.object %>
 	<h4>Title</h4>
-	<%= f.text_field :title %>
+	  <%= f.text_field :title %>
 	<h4>Body</h4>
-	<%= f.text_field :body %>
+	  <%= f.text_field :body %>
 	<div class="actions">
 		<input name="commit" type="submit" value="Create Book" data-disable-with="Create Book">
 	</div>

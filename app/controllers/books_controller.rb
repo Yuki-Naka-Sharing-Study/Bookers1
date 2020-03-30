@@ -10,15 +10,15 @@ class BooksController < ApplicationController
 
 	def create
     # ストロングパラメーターを使用
-    @book = Book.new(book_params)
-    @books = Book.all
+        @book = Book.new(book_params)
+        @books = Book.all
     # DBへ保存する
-    if @book.save
-    	flash[:notice] = "Book was successfully created"
-    	redirect_to book_path(@book)
-    else
-    	render action: :index
-    end
+		if  @book.save
+			flash[:notice] = "Book was successfully created"
+			redirect_to book_path(@book)
+		else
+			render action: :index
+		end
     end
 
 	def edit
@@ -33,10 +33,10 @@ class BooksController < ApplicationController
 	end
 
 	def destroy
-	     book = Book.find(params[:id]) #データ(レコード)を1件取得
-	     book.destroy #データ（レコード）を削除
-	     flash[:notice] = "Book was successfully destroyed"
-	     redirect_to books_path #List一覧画面へリダイレクト
+	    book = Book.find(params[:id]) #データ(レコード)を1件取得
+	    book.destroy #データ（レコード）を削除
+	    flash[:notice] = "Book was successfully destroyed"
+	    redirect_to books_path #List一覧画面へリダイレクト
 	 end
 
 	 private

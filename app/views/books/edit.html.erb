@@ -2,14 +2,14 @@
 
 <!-- form_for部分 -->
 <%= form_for(@book) do |f| %>
-<h4>Title</h4>
-<%= f.text_field :title %>
-<h4>Body</h4>
-<%= f.text_field :body %>
-<div class="actions">
-	<input name="commit" type="submit" value="Update Book" data-disable-with="Update Book">
-</div>
-<%= link_to "Show", book_path%>
-<%= link_to "Back", books_path %>
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+  <h4>Body</h4>
+  <%= f.text_field :body %>
+  <div class="actions">
+    <input name="commit" type="submit" value="Update Book" data-disable-with="Update Book">
+  </div>
+  <%= link_to "Show", book_path%>
+  <%= link_to "Back", books_path %>
 <% end %>
 
